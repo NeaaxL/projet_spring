@@ -1,0 +1,126 @@
+/* CSS pour les éléments de base */
+body {
+    font-family: Arial, sans-serif;
+    background-image:url(tennis.jpg);
+    background-repeat : no-repeat;
+    background-size: 100%;
+    color: #ffffff;
+}
+
+/* CSS pour les liens */
+a {
+    color: #fffb00;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #0056b3;
+}
+
+/* CSS pour les boutons */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover {
+    background-color: #0056b3;
+}
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* CSS pour les tableaux */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+tr {
+    width: 100%;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+
+  input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.accueil-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .accueil-btn:hover {
+    background-color: #0069d9;
+  }
+
+  /* Définir les styles de la div contenant le bandeau */
+#bandeau {
+    background-color: #6ab6f5; /* couleur de fond du bandeau */
+    color: #fff; /* couleur du texte */
+    padding: 10px; /* espace entre le contenu du bandeau et ses bords */
+    text-align: center; /* centrer le texte dans le bandeau */
+  }
+  
+  /* Définir les styles des liens dans le bandeau */
+  #bandeau a {
+    color: #fff; /* couleur des liens */
+    text-decoration: none; /* supprimer la soulignement par défaut */
+    padding: 5px; /* espace autour des liens */
+  }
+
+  #logo {
+    float: left; /* positionner le conteneur à gauche */
+    margin-right: 20px; /* espace entre l'image et le titre */
+    height: 50px; /* hauteur de l'image */
+    line-height: 50px; /* centrer verticalement */
+  }
+  
+  #logo img {
+    height: 250%; /* ajuster la taille de l'image */
+  }
+
+  #recompenses td {
+    background-color: grey;
+  }
+  
+  #footer p {
+    text-align: right;
+    font-size: 20px;
+  }
+  
+  

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <meta charset="utf-8">
+<body>
+      <header>
+        <div id="bandeau">
+            <div id="logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+          <h1>Tournoi de Tennis</h1>
+          <nav>
+            <ul>
+              <a href="http://localhost:8080/index.html"><button>Accueil</button></a>
+              <a href="/joueur/creer"><button>Inscription</button></a>
+              <a href="/match/creer"><button>Créer un match</button></a>
+              <a href="/joueur/lister"><button>Liste des joueurs</button></a>
+              <a href="/match/lister"><button>Liste des matchs</button></a>
+              <a href="/match/tableau"><button>Tableau</button></a>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <section id="presentation">
+          <h2>Bienvenue au tournoi de tennis de LIMAYRAC</h2>
+          <p>Le tournoi de tennis est un événement annuel qui rassemble les meilleurs joueurs du monde pour s'affronter sur les courts de tennis. Cette année, le tournoi aura lieu du 5 au 15 juillet à L'Institut Limayrac.</p>
+          <a href="/joueur/creer" class="button">Inscrivez-vous maintenant</a>
+        </section>
+        <section id="programme">
+          <h2>Programme du tournoi</h2>
+          <ul>
+            <li>05 juillet : début du tournoi</li>
+            <li>10 juillet : quarts de finale</li>
+            <li>12 juillet : demi-finales</li>
+            <li>14 juillet : finale femmes</li>
+            <li>15 juillet : finale hommes</li>
+          </ul>
+        </section>
+      </main>
+      <section id="recompenses">
+      <h2>Récompenses du tournoi</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Position</th>
+            <th>Prix</th>
+            <th>Récompenses</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1er</td>
+            <td>1000 €</td>
+            <td>Trophée du vainqueur</td>
+          </tr>
+          <tr>
+            <td>2ème</td>
+            <td>500 €</td>
+            <td>Médaille d'argent</td>
+          </tr>
+          <tr>
+            <td>3ème</td>
+            <td>250 €</td>
+            <td>Médaille de bronze</td>
+          </tr>
+          <tr>
+            <td>4ème au 8ème</td>
+            <td>100 € chacun</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Meilleur joueur junior</td>
+            <td>150 €</td>
+            <td>Certificat de réalisation</td>
+          </tr>
+          <tr>
+            <td>Meilleur joueur senior</td>
+            <td>150 €</td>
+            <td>Certificat de réalisation</td>
+          </tr>
+        </tbody>
+      </table>
+      </section>
+      <section id="footer">
+      <footer>
+        <p>&copy; 2023 Tournoi de Tennis. Tous droits réservés.</p>
+      </footer>
+      </section>
+    </body>
+  </html>

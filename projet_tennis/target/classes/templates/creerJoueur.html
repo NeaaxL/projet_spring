@@ -1,0 +1,35 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type="text/css" href="../style.css">
+<meta charset="utf-8">
+<body>
+    <div id="bandeau">
+        <nav>
+          <ul>
+            <h1>Création d'un joueur</h1>
+            <a href="http://localhost:8080/index.html"><button>Accueil</button></a></li>
+            <a href="/match/creer"><button>Créer un match</button></a></li>
+            <a href="/joueur/lister"><button>Liste des joueurs</button></a></li>
+            <a href="/match/lister"><button>Liste des matchs</button></a></li>
+            <a href="/match/tableau"><button>Tableau</button></a></li>
+          </ul>
+        </nav>
+      </div>
+    <form action="#" th:action="@{/joueur/creer}" th:object="${joueur}" method="post">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" th:field="*{nom}" placeholder="Entrez le nom du joueur">
+
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" th:field="*{prenom}" placeholder="Entrez le prénom du joueur">
+
+        <label for="nationalite">Nationalité :</label>
+        <input type="text" id="nationalite" th:field="*{nationalite}" placeholder="Entrez la nationalité du joueur">
+
+        <label for="age">Âge :</label>
+        <input type="text" id="age" th:field="*{age}" placeholder="Entrez l'âge du joueur">
+
+        <input type="submit" value="Valider" />
+        <input type="reset" value="Annuler" />
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<html xmlns:th="http://www.thymeleaf.org">
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <meta charset="utf-8">
+  <body>
+    <div id="bandeau">
+      <nav>
+        <ul>
+          <h1>Liste des matchs</h1>
+          <a href="http://localhost:8080/index.html"><button>Accueil</button></a></li>
+          <a href="/joueur/creer"><button>Créer Joueur</button></a></li>
+          <a href="/match/creer"><button>Créer un match</button></a></li>
+          <a href="/joueur/lister"><button>Liste des joueurs</button></a></li>
+          <a href="/match/tableau"><button>Tableau</button></a></li>
+        </ul>
+      </nav>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Match</th>
+          <th>Terrain</th>
+          <th>Joueur 1</th>
+          <th>Joueur 2</th>
+          <th>Score</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="match : ${matchs}">
+          <td th:text="${match.id}"></td>
+          <td th:text="${match.num_terrain}"></td>
+          <td th:text="${match.joueur1.nom}+' '+${match.joueur1.prenom}"></td>
+          <td th:text="${match.joueur2.nom}+' '+${match.joueur2.prenom}"></td>
+          <td>
+            <span th:if="${match.score != null}" th:text="${match.score}"></span>
+            <span th:if="${match.score == null}">-</span>
+          </td>
+          <td>
+            <a th:href="@{'/editer/' + ${match.id}}" class="btn btn-danger" role="button"><button>Score</button></a>
+            
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

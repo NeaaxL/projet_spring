@@ -1,0 +1,38 @@
+<html xmlns:th="http://www.thymeleaf.org">
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <meta charset="utf-8">
+  <body>
+    <div id="bandeau">
+      <nav>
+        <ul>
+          <h1>Liste des joueurs</h1>
+          <a href="http://localhost:8080/index.html"><button>Accueil</button></a></li>
+          <a href="/joueur/creer"><button>Créer Joueur</button></a></li>
+          <a href="/match/creer"><button>Créer un match</button></a></li>
+          <a href="/match/lister"><button>Liste des matchs</button></a></li>
+          <a href="/match/tableau"><button>Tableau</button></a></li>
+        </ul>
+      </nav>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Prenom</th>
+          <th>Age</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="joueur : ${joueurs}">
+          <td th:text="${joueur.nom}"></td>
+          <td th:text="${joueur.prenom}"></td>
+          <td th:text="${joueur.age}"></td>
+          <td>
+            <a th:href="@{'/effacer/' + ${joueur.id}}" class="btn btn-danger" role="button"><button>Supprimer</button></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

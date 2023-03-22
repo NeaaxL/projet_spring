@@ -1,0 +1,42 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type="text/css" href="../style.css">
+<meta charset="utf-8">
+<body>
+    <div>
+        <div id="bandeau">
+        <nav>
+          <ul>
+            <h1>Création d'un match</h1>
+            <a href="http://localhost:8080/index.html"><button>Accueil</button></a></li>
+            <a href="/joueur/creer"><button>Créer un joueur</button></a></li>
+            <a href="/joueur/lister"><button>Liste des joueurs</button></a></li>
+            <a href="/match/lister"><button>Liste des matchs</button></a></li>
+            <a href="/match/tableau"><button>Tableau</button></a></li>
+          </ul>
+        </nav>
+        </div>
+
+        <form action="#" th:action="@{/match/creer}" th:object="${match}" method="post">
+            <p>Numéro terrain: <input type="number" th:field="*{num_terrain}" /></p>
+            <p>Joueur1:
+            <select th:field="*{joueur1}">
+                <option th:each="joueur : ${joueurs}"
+                        th:text="${joueur.nom}+' '+${joueur.prenom}"
+                        th:value="${joueur.id}">
+                </option>
+            </select>
+            </p>
+            <p>Joueur2:
+            <select th:field="*{joueur2}">
+                <option th:each="joueur : ${joueurs}"
+                        th:text="${joueur.nom}+' '+${joueur.prenom}"
+                        th:value="${joueur.id}">
+                </option>
+            </select>
+            </p>
+            <p><input type="submit" value="Valider" /> <input type="reset" value="Annuler"></p>
+        </form>
+    </div>
+</body>
+
+</html>
