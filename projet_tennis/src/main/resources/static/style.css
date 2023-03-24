@@ -5,6 +5,7 @@ body {
     background-repeat : no-repeat;
     background-position: center;
     height: 100vh;
+    background-size: 100%;
     color: #ffffff;
 }
 
