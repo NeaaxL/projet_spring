@@ -3,7 +3,8 @@ body {
     font-family: Arial, sans-serif;
     background-image:url(tennis.jpg);
     background-repeat : no-repeat;
-    background-size: 100%;
+    background-position: center;
+    height: 100vh;
     color: #ffffff;
 }
 
